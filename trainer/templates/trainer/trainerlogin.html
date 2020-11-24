@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'trainer/base.html' %}
+{% block body_block %}
+<h1>Trainer Login</h1>
+<form method="post" >
+    {% csrf_token %}
+<img src="static/image/login.png">
+    {{form.as_p}}
+
+    <input type="submit" value="LOGIN">
+<a href="{%url 'regg' %}" class="btn btn-danger">SIGNUP</a>
+</form>
+{% endblock %}
